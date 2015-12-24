@@ -5,12 +5,17 @@
     <title>Cat Clicker</title>
 </head>
 <body>
-    <ul id="cat-list"></ul>
-    <div id="cat">
 
-        <h2 id="cat-name"></h2>
-        <div id="cat-count"></div>
-        <img id="cat-img" src="" alt="cute cat">
+    <div>
+
+        <h2 data-bind="text: name"></h2>
+        <div data-bind="text: clickCount"></div>
+        <!-- 
+        use comma to apply more than one data-binding for the same element 
+        use attr: for attribute and the value is object literal
+        -->
+        <img src="" alt="cute cat" data-bind="click: incrementCounter, 
+        attr: {src: imgSrc} ">
 
     </div>
     <script src="js/lib/knockout-3.2.0.js"></script>
